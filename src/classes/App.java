@@ -26,9 +26,15 @@ public class App {
         int n = 0;
         int myNumber = r.nextInt(max - min + 1) + min;
         do{
-            System.out.println(
-               "Программа задумала число от "+min+" до "+max+", угадай:"
-            );
+            if(n < 1){
+                System.out.println(
+                    "Программа задумала число от "+min+" до "+max+", угадай:"
+                );
+            }else{
+                System.out.println(
+                        "Попытка №"+(n+1)
+                );
+            }
             int yourNumber = s.nextInt();
             if(myNumber == yourNumber){
                 System.out.println("Ты выиграл!");
